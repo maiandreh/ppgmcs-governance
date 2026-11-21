@@ -12,6 +12,13 @@ Respostas são registradas no Google Sheets e processadas pelo Google Apps Scrip
 
 A criação manual de Issues deixa de ser o procedimento padrão para novas demandas. Ela fica reservada à manutenção técnica do projeto, correções internas e contingências administradas pelos responsáveis.
 
+## Protótipo do novo portal
+
+- [Protótipo navegável (HTML)](prototypes/portal/index.html)
+- [Instruções e limitações do protótipo](prototypes/portal/README.md)
+
+O protótipo demonstra a central de ajuda/FAQ e a agenda acadêmica com eventos fictícios. **Ainda não é uma versão homologada do portal.**
+
 ## Documentação
 
 - [Governança e responsabilidades](docs/governanca.md)
