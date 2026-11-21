@@ -146,9 +146,9 @@ function garantirColunas_(sheet) {
 }
 
 function extrairResposta_(sheet, row) {
-  const values = sheet.getRange(1, 1, row, sheet.getLastColumn()).getDisplayValues();
-  const headers = values[0];
-  const current = values[row - 1];
+  const columns = sheet.getLastColumn();
+  const headers = sheet.getRange(1, 1, 1, columns).getDisplayValues()[0];
+  const current = sheet.getRange(row, 1, 1, columns).getDisplayValues()[0];
   const field = key => {
     const index = headers.indexOf(CFG.questions[key]);
     return index < 0 ? '' : String(current[index] || '').trim();
