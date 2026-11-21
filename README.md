@@ -17,7 +17,9 @@ A criação manual de Issues deixa de ser o procedimento padrão para novas dema
 - [Protótipo navegável (HTML)](prototypes/portal/index.html)
 - [Instruções e limitações do protótipo](prototypes/portal/README.md)
 
-O protótipo demonstra a central de ajuda/FAQ e a agenda acadêmica com eventos fictícios. **Ainda não é uma versão homologada do portal.**
+O protótipo demonstra a central de ajuda/FAQ e a agenda acadêmica com eventos fictícios, **sem formulário de demandas**. **Ainda não é uma versão homologada do portal.**
+
+**Publicação isolada:** [workflow de GitHub Pages](.github/workflows/deploy-portal.yml). Após ativar **Settings → Pages → GitHub Actions**, o site deverá ser acessível em [maiandreh.github.io/ppgmcs-governance](https://maiandreh.github.io/ppgmcs-governance/).
 
 ## Documentação
 
