@@ -4,10 +4,19 @@ Espaço de documentação e discussão da iniciativa voluntária de reorganizaç
 
 > **Status: proposta em construção.** Nada neste repositório deve ser interpretado como ato, política ou decisão oficial do programa sem validação explícita da instância competente.
 
+## Registrar uma demanda
+
+**Canal de entrada adotado para a operação:** [Formulário de demandas do PPGMCS](https://docs.google.com/forms/d/e/1FAIpQLScMfcz1FtOyBGHIW5whgcdp14P3vui7PoHPUHSfkJieHMIk-g/viewform).
+
+Respostas são registradas no Google Sheets e processadas pelo Google Apps Script, que cria uma Issue pública no GitHub para triagem. **Não informe dados pessoais, credenciais ou informações sigilosas nos campos de descrição**, pois poderão ser publicados. [Veja o fluxo de entrada e as regras de privacidade](docs/fluxos/entrada-formulario.md).
+
+A criação manual de Issues deixa de ser o procedimento padrão para novas demandas. Ela fica reservada à manutenção técnica do projeto, correções internas e contingências administradas pelos responsáveis.
+
 ## Documentação
 
 - [Governança e responsabilidades](docs/governanca.md)
 - [Frentes de trabalho](docs/frentes-de-trabalho.md)
+- [Entrada de demandas pelo formulário](docs/fluxos/entrada-formulario.md)
 - [Fluxo de demandas](docs/fluxos/demandas.md)
 - [Fluxo de homologação](docs/fluxos/aprovacao.md)
 - [Levantamento inicial](docs/levantamento.md)
@@ -19,7 +28,9 @@ Espaço de documentação e discussão da iniciativa voluntária de reorganizaç
 
 ```mermaid
 flowchart LR
-    A["Problema identificado"] --> B["Triagem"]
+    A["Google Forms: nova demanda"] --> S["Google Sheets e Apps Script"]
+    S --> I["Issue pública criada automaticamente"]
+    I --> B["Triagem"]
     B --> C["Refinamento"]
     C --> D{"Escopo validado?"}
     D -- "Revisar" --> C
