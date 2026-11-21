@@ -21,6 +21,7 @@ A criação manual de Issues deixa de ser o procedimento padrão para novas dema
 - [Fluxo de homologação](docs/fluxos/aprovacao.md)
 - [Levantamento inicial](docs/levantamento.md)
 - [Requisitos: agenda acadêmica, eventos e bancas](docs/requisitos-portal-agenda.md)
+- [Requisitos: central de ajuda e FAQ](docs/requisitos-portal-faq.md)
 - [Registro de decisões](docs/decisoes/README.md)
 - [Como contribuir](CONTRIBUTING.md)
 - [Integração Google Forms → GitHub Issues](integrations/google-forms/README.md)
