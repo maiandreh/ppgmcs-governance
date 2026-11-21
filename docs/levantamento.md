@@ -45,3 +45,9 @@ A divisão entre processos e conteúdos foi apresentada para revisão do grupo. 
 ## Próximo passo
 
 Refinar demandas individualmente: problema, usuários, processo atual, base normativa, dono do processo, impacto, dependências e critérios de aceite.
+
+## Agenda acadêmica, eventos e bancas — requisito acrescentado
+
+Foi solicitada uma seção central de calendário no portal, capaz de divulgar eventos científicos, próximas bancas de qualificação e defesa, atividades e prazos acadêmicos. A grade mensal deve coexistir com lista cronológica, filtros e possibilidade de adicionar compromissos a agendas externas. A publicação precisa de fonte oficial, validação, responsável por atualização e tratamento de remarcação/cancelamento.
+
+Especificação funcional e fluxo Mermaid: [Requisitos da agenda e bancas](requisitos-portal-agenda.md).
