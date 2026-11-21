@@ -5,8 +5,19 @@
 ## Acesso
 
 - [Abrir o HTML do protótipo](index.html)
-- [Visualizar pelo GitHub Pages](https://maiandreh.github.io/ppgmcs-governance/prototypes/portal/) **somente se o GitHub Pages for habilitado** na configuração do repositório.
+- [Visualizar o protótipo pelo GitHub Pages](https://maiandreh.github.io/ppgmcs-governance/) **após habilitar o Pages com fonte GitHub Actions**.
+- [Workflow de publicação](../../.github/workflows/deploy-portal.yml): envia exclusivamente o arquivo HTML para o Pages.
 - Para testar localmente, baixe `index.html` e abra no navegador, sem servidor ou dependências externas.
+
+## Como ativar o site
+
+1. Abra **Settings → Pages** no repositório.
+2. Em **Build and deployment → Source**, selecione **GitHub Actions**, não **Deploy from a branch**.
+3. Acesse **Actions → Publicar protótipo HTML no GitHub Pages** e use **Run workflow** (branch `main`) se não houver execução recente.
+4. Verifique se a execução terminou com sucesso e clique no link publicado em **Settings → Pages**.
+5. O endereço esperado é `https://maiandreh.github.io/ppgmcs-governance/`.
+
+O workflow publica somente `prototypes/portal/index.html` como a raiz do site (mais um arquivo técnico vazio `.nojekyll`). As pastas `docs/`, `integrations/` e arquivos de governança **não fazem parte do artifact do site**. O repositório em si continua público.
 
 ## Funcionalidades demonstradas
 
@@ -15,7 +26,7 @@
 - Calendário acadêmico mensal com **eventos fictícios**, filtros e exportação `.ics`;
 - Informações sobre pesquisa, processos seletivos e documentos;
 - Layout adaptável e controles básicos de acessibilidade;
-- Link para canal de sugestões e demandas do PPGMCS.
+- **Sem integração ou link para o Google Forms nesta demonstração pública**. O canal de demandas permanece independente na documentação de governança.
 
 ## Cuidados antes de uma versão oficial
 
@@ -26,7 +37,7 @@
 5. Realizar avaliação de acessibilidade, usabilidade, segurança e proteção de dados.
 6. Homologar com a coordenação e instâncias competentes antes de qualquer implantação institucional.
 
-**Importante:** o código HTML está versionado neste diretório. Não há backend, autenticação ou cadastro real de eventos. A publicação no GitHub **não torna o protótipo um site público hospedado**; o GitHub Pages precisa ser habilitado separadamente, caso desejado.
+**Importante:** o código HTML está versionado neste diretório. Não há backend, autenticação ou cadastro real de eventos. A implantação no GitHub Pages depende da configuração indicada acima; o funcionamento público deve ser verificado após o deploy.
 
 ## Requisitos relacionados
 
