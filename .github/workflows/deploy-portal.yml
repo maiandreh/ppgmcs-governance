@@ -1,0 +1,46 @@
+name: Publicar protótipo HTML no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "prototypes/portal/**"
+      - ".github/workflows/deploy-portal.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    name: Publicar apenas o protótipo
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Obter código
+        uses: actions/checkout@v4
+      - name: Configurar GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Preparar conteúdo público
+        run: |
+          test -f prototypes/portal/index.html
+          mkdir -p _site
+          cp prototypes/portal/index.html _site/index.html
+          printf '' > _site/.nojekyll
+          echo "Conteúdo do artifact:"
+          find _site -maxdepth 2 -type f -print
+      - name: Enviar artifact público (somente HTML)
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publicar
+        id: deployment
+        uses: actions/deploy-pages@v4
