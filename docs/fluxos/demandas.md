@@ -1,10 +1,12 @@
 # Fluxo de demandas
 
-**Status: proposta — ainda não aprovada.**
+**Entrada operacional:** [Google Forms](https://docs.google.com/forms/d/e/1FAIpQLScMfcz1FtOyBGHIW5whgcdp14P3vui7PoHPUHSfkJieHMIk-g/viewform). As etapas de governança e aprovação abaixo continuam propostas para deliberação.
 
 ```mermaid
 flowchart TD
-    A["Problema ou oportunidade (Issue)"] --> B["Triagem e classificação"]
+    A["Solicitante preenche Google Forms"] --> S["Sheets registra resposta e identificador"]
+    S --> T["Apps Script cria ou reconcilia Issue pública"]
+    T --> B["Triagem e classificação"]
     B --> C["Refinamento: público, regras, critérios de aceite"]
     C --> D{"Escopo institucional requer validação?"}
     D -- "Sim" --> E{"Decisão da autoridade competente"}
@@ -25,6 +27,8 @@ flowchart TD
     J -- "Não" --> L
     L --> M["Registro e acompanhamento"]
 ```
+
+A entrada de uma demanda ocorre **pelo formulário**, não pela abertura manual de Issue. Problemas internos de infraestrutura podem ser registrados diretamente pelos mantenedores. Consulte [fluxo detalhado de entrada](entrada-formulario.md).
 
 ## Estados sugeridos no GitHub Projects
 
