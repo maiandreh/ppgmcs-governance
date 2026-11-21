@@ -13,6 +13,7 @@ Espaço de documentação e discussão da iniciativa voluntária de reorganizaç
 - [Levantamento inicial](docs/levantamento.md)
 - [Registro de decisões](docs/decisoes/README.md)
 - [Como contribuir](CONTRIBUTING.md)
+- [Integração Google Forms → GitHub Issues](integrations/google-forms/README.md)
 
 ## Visão do processo
 
