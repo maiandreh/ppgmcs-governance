@@ -1,24 +1,29 @@
-# Guia de contribuição — proposta
+# Como contribuir com a reestruturação do PPGMCS
 
-1. Abra uma **Issue** descrevendo o problema, quem é afetado e a situação atual.
-2. Classifique-a como conteúdo, processo/serviço, tecnologia ou autoavaliação/dados.
-3. Refine com outros participantes, identificando fontes, regras, dependências e critérios de aceite.
-4. Para mudanças de escopo institucional, obtenha validação de quem possui competência antes de implementar.
-5. Trabalhe em branch, abra Pull Request vinculado à Issue e solicite revisão por outro colaborador.
-6. Se a mudança precisar de homologação institucional, registre a decisão antes de considerar a entrega concluída.
+> **Canal padrão para novas demandas:** [Formulário PPGMCS](https://docs.google.com/forms/d/e/1FAIpQLScMfcz1FtOyBGHIW5whgcdp14P3vui7PoHPUHSfkJieHMIk-g/viewform). Este procedimento substitui a orientação anterior de abrir uma Issue diretamente no GitHub.
 
-## Modelo de Issue
+## Para quem deseja registrar um problema ou sugestão
 
-- **Problema/oportunidade:**
-- **Público afetado:**
-- **Evidências / situação atual:**
-- **Resultado esperado:**
-- **Categoria:**
-- **Fontes institucionais:**
-- **Critérios de aceite:**
-- **Responsável pela execução:**
-- **Responsável por validação (se aplicável):**
+1. Preencha o [formulário de demandas](https://docs.google.com/forms/d/e/1FAIpQLScMfcz1FtOyBGHIW5whgcdp14P3vui7PoHPUHSfkJieHMIk-g/viewform) explicando o problema, quem é afetado e, se possível, a melhoria esperada.
+2. **Não insira dados pessoais ou sigilosos nos campos descritivos.** O repositório e suas Issues são públicos.
+3. Uma resposta válida é registrada na planilha de controle e processada pela integração Google Sheets / Apps Script.
+4. O GitHub recebe uma Issue para triagem. O registro **não implica aprovação, priorização ou compromisso de implementação**.
+5. A equipe responsável avalia duplicidade temática, classifica, esclarece requisitos e encaminha para validação institucional quando pertinente.
 
-## Cuidados
+## Para estudantes e colaboradores que executam as demandas
 
-Não inclua dados pessoais, conversas privadas, credenciais ou documentos restritos. Este repositório está público. Papéis individuais devem ser confirmados antes da atribuição.
+1. Trabalhem a partir da Issue criada pela integração, usando comentários, tarefas vinculadas ou Pull Requests.
+2. Registrem fontes, regras institucionais, dependências, critérios de aceite e quem aprovará cada decisão.
+3. Para mudanças institucionais, validem o escopo antes de implementar; revisão técnica e homologação são etapas diferentes.
+4. Criem uma branch e um Pull Request associado à Issue; solicitem revisão por pares.
+5. Registrem a aprovação ou recusa com justificativa; encerrem a Issue após a conclusão documentada.
+
+## Exceções de criação manual
+
+Integrantes com acesso ao GitHub podem criar Issues diretamente para tarefas **internas de manutenção**, problemas técnicos no próprio repositório, subtarefas de demandas existentes ou contingência quando o formulário estiver indisponível. Isso não substitui o canal público de recebimento.
+
+## Identificação e contato do solicitante
+
+A proposta é coletar nome, e-mail e vínculo institucional **somente no ambiente Google com acesso restrito**. A configuração atual desses campos deve ser verificada pelos administradores antes de divulgar essa funcionalidade como implantada. Mesmo quando coletados, nome e e-mail **não devem ser copiados para a Issue pública**.
+
+Consulte [fluxo de entrada, publicação e privacidade](docs/fluxos/entrada-formulario.md) e [guia técnico da integração](integrations/google-forms/README.md).
