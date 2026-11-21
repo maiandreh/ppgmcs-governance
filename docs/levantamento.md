@@ -51,3 +51,7 @@ Refinar demandas individualmente: problema, usuários, processo atual, base norm
 Foi solicitada uma seção central de calendário no portal, capaz de divulgar eventos científicos, próximas bancas de qualificação e defesa, atividades e prazos acadêmicos. A grade mensal deve coexistir com lista cronológica, filtros e possibilidade de adicionar compromissos a agendas externas. A publicação precisa de fonte oficial, validação, responsável por atualização e tratamento de remarcação/cancelamento.
 
 Especificação funcional e fluxo Mermaid: [Requisitos da agenda e bancas](requisitos-portal-agenda.md).
+
+## Central de ajuda / FAQ — requisito acrescentado
+
+A seção **Como podemos ajudar?** deve ser independente, com perguntas e respostas expansíveis, pesquisa e filtros por público. Algumas respostas terão atalhos diretos para serviços ou fontes oficiais verificadas; outras trarão apenas instruções, quando não houver serviço digital aprovado. A origem e a vigência das orientações devem ser validadas. Ver [especificação da central de ajuda e FAQ](requisitos-portal-faq.md).
