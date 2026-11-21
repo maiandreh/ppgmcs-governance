@@ -1,6 +1,12 @@
 # Integração Google Forms → Sheets → Apps Script → GitHub Issues
 
-**Status:** código publicado; ativação na conta Google e autorização do token GitHub ainda são necessárias. **Repositório de destino:** `maiandreh/ppgmcs-governance` (público).
+**Status:** integração configurada e relatada como funcional pelo responsável, após teste de criação de Issue. A configuração na conta Google não é gerenciada por este repositório; alterações nos arquivos .gs aqui **não atualizam automaticamente** o Apps Script em produção. **Repositório de destino:** `maiandreh/ppgmcs-governance` (público).
+
+## Formulário em uso
+
+**[Abrir formulário de demandas do PPGMCS](https://docs.google.com/forms/d/e/1FAIpQLScMfcz1FtOyBGHIW5whgcdp14P3vui7PoHPUHSfkJieHMIk-g/viewform)**
+
+Este é o canal padrão para registrar novas demandas; a criação direta de Issues por usuários deixa de ser o procedimento sugerido. Consulte [política de entrada e privacidade](../../docs/fluxos/entrada-formulario.md).
 
 ## O que faz
 
@@ -22,7 +28,11 @@
 
 **Não publique o token em arquivo, código, Issue ou README.** Armazene somente em **Apps Script → Configurações do projeto → Propriedades do script** com chave `GITHUB_TOKEN`.
 
-## Configuração passo a passo (sem linha de comando)
+## Configuração passo a passo (instalação nova ou recuperação)
+
+**Não execute novamente `criarFormularioPPGMCS()` no projeto já configurado.** Ela cria outro formulário; o formulário em uso está no link acima. Para recuperar a instalação, verifique a planilha e o script que já estão associados.
+
+
 
 1. Crie uma planilha Google exclusiva para as respostas, preferencialmente em conta institucional.
 2. Abra **Extensões → Apps Script** na planilha.
@@ -69,7 +79,9 @@ Isso fornece **idempotência por submissão** (não detecção semântica de dua
 
 ## Segurança e governança
 
-- O repositório é **público**. Toda resposta aceita será publicada como texto em Issue pública. **Nunca** colete e-mail, matrícula, telefone, dados de saúde ou outros dados pessoais/sensíveis sem avaliação institucional.
+- O repositório é **público**. Os campos de título, problema, público, sugestão e referência serão copiados para a Issue. Não inclua dados pessoais ou sigilosos nesses campos.
+- Se nome, vínculo e e-mail forem coletados no Google Forms, **nome e e-mail devem permanecer somente no Google Sheets** sob controle de acesso restrito; não os inclua na montagem da Issue.
+- **A versão atual do código não realiza detecção/redação automática de dados pessoais em texto livre.** Antes de abrir o formulário amplamente, avaliar uma camada de triagem de privacidade ou controles de entrada.
 - O formulário avisa desse destino antes do envio. Considere restringir o acesso, moderação ou fazer triagem humana se houver risco de conteúdo pessoal ou spam.
 - Apenas informações do formulário e UUID são enviados à API. A planilha permanece sob a conta Google controladora.
 - O token deve ter escopo mínimo, expiração e rotação periódica.
